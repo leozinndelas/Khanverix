@@ -1,4 +1,4 @@
-const ver = "V1.0.2";
+const ver = "V1.0.3";
 
 let device = {
     mobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone|Mobile|Tablet|Kindle|Silk|PlayBook|BB10/i.test(navigator.userAgent),
@@ -247,7 +247,7 @@ function setupMenu() {
 /* Main Functions */ 
 function setupMain(){
     function spoofQuestion() {
-        const phrases = [ "🔥 Get good, get [Khanverix](https://discord.gg/3a5yHUhGuw)!", "🤍 Made by [@im.leozin.@im.marcelod64].", "☄️ By https://github.com/leozinndelas " ];
+        const phrases = [ "🔥 Get good, get [Khanverix](https://discord.gg/3a5yHUhGuw)!", "🤍 Made by [@im.leozin.@im.marcelod64].", "☄️ By https://khanverix.squareweb.app/ " ];
         const originalFetch = window.fetch;
         window.fetch = async function (input, init) {
             let body;
@@ -263,7 +263,7 @@ function setupMain(){
                     if(itemData.question.content[0] === itemData.question.content[0].toUpperCase()){
                         itemData.answerArea = { "calculator": false, "chi2Table": false, "periodicTable": false, "tTable": false, "zTable": false }
                         itemData.question.content = phrases[Math.floor(Math.random() * phrases.length)] + `[[☃ radio 1]]`;
-                        itemData.question.widgets = { "radio 1": { options: { choices: [ { content: "Resposta correta.", correct: true }, { content: "Resposta incorreta.", correct: false } ] } } };
+                        itemData.question.widgets = { "radio 1": { options: { choices: [ { content: "👻Resposta correta.", correct: true }, { content: "Resposta incorreta.", correct: false } ] } } };
                         responseObj.data.assessmentItem.item.itemData = JSON.stringify(itemData);
                         sendToast("💣 Questão fodida.", 1000);
                         return new Response(JSON.stringify(responseObj), { status: originalResponse.status, statusText: originalResponse.statusText, headers: originalResponse.headers });
