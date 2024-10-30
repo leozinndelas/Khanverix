@@ -1,4 +1,4 @@
-const ver = "V3.0.2";
+const ver = "V1.0.2";
 
 let device = {
     mobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone|Mobile|Tablet|Kindle|Silk|PlayBook|BB10/i.test(navigator.userAgent),
@@ -247,7 +247,7 @@ function setupMenu() {
 /* Main Functions */ 
 function setupMain(){
     function spoofQuestion() {
-        const phrases = [ "🔥 Get good, get [Khanverix](https://discord.gg/3a5yHUhGuw)!", "🤍 Made by [@im.leozin].", "☄️ By https://github.com/leozinndelas " ];
+        const phrases = [ "🔥 Get good, get [Khanverix](https://discord.gg/3a5yHUhGuw)!", "🤍 Made by [@im.leozin.@im.marcelod64].", "☄️ By https://github.com/leozinndelas " ];
         const originalFetch = window.fetch;
         window.fetch = async function (input, init) {
             let body;
@@ -265,7 +265,7 @@ function setupMain(){
                         itemData.question.content = phrases[Math.floor(Math.random() * phrases.length)] + `[[☃ radio 1]]`;
                         itemData.question.widgets = { "radio 1": { options: { choices: [ { content: "Resposta correta.", correct: true }, { content: "Resposta incorreta.", correct: false } ] } } };
                         responseObj.data.assessmentItem.item.itemData = JSON.stringify(itemData);
-                        sendToast("🔓 Questão exploitada.", 1000);
+                        sendToast("💣 Questão fodida.", 1000);
                         return new Response(JSON.stringify(responseObj), { status: originalResponse.status, statusText: originalResponse.statusText, headers: originalResponse.headers });
                     }
                 }
@@ -289,7 +289,7 @@ function setupMain(){
                         body = JSON.stringify(bodyObj);
                         if (input instanceof Request) { input = new Request(input, { body: body }); } 
                         else init.body = body; 
-                        sendToast("🔓 Vídeo exploitado.", 1000)
+                        sendToast("💣 Vídeo fodido.", 1000)
                     }
                 } catch (e) { }
             }
@@ -337,7 +337,7 @@ function setupMain(){
                                         widget.options.choices.forEach(choice => {
                                             if (choice.correct) {
                                                 choice.content = "✅ " + choice.content;
-                                                sendToast("🔓 Respostas reveladas.", 1000);                
+                                                sendToast("🤬 Respostas reveladas.", 1000);                
                                             }
                                         });
                                     }
@@ -388,7 +388,7 @@ function setupMain(){
                 classToCheck.forEach(async (q) => {
                     findAndClickByClass(q);
                     const element = document.getElementsByClassName(q)[0];
-                    if(element&&element.textContent=='Mostrar resumo') { sendToast("🎉 Exercício concluido!", 3000); playAudio('https://r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/4x5g14gj.wav'); }
+                    if(element&&element.textContent=='Mostrar resumo') { sendToast("🤭 Exercício concluido!", 3000); playAudio('https://r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/4x5g14gj.wav'); }
                 });
             }
             await delay(featureConfigs.autoAnswerDelay*750);
@@ -426,74 +426,3 @@ loadScript('https://cdn.jsdelivr.net/npm/toastify-js', 'toastifyPlugin')
     setupMain();
     console.clear();
 })
-
-// Thank you to everyone who has purchased access to my cheat as of 10/28/24.
-/*
-@Thomaz015
-@grazynabazio
-@meyssaxavier
-@WESLEY.SPREDEMANN
-@carine.rech.alves
-@nazare.de.maria
-@jowsanth
-@bielzy
-@rafaeldeagostino
-@AMFDS
-@Jv010107
-@Mattheusfreitas01
-@Guilhermeoliveira2623
-@Matt010101
-@voncallis
-@Thamiris0001
-@Holmes1212
-@Martinss0000
-@zRoque
-@LaryCouto.com.br
-@IanyckFerreira
-@sales7
-@AleSobral
-@wbzz2121
-@Umunizzz
-@ViniciusMancini
-@ricardaosantista
-@marcos10pc
-@bzinxxx
-@ryanmzmartins
-@Kaleb1577
-@brunopereirabarros
-@RodrigoMartins1236751
-@guixzf
-@Leandrohenrq
-@damnntiago
-@WhoisMe777
-@Gustavopc21
-@matheus.hx2
-@WSZL
-@LeozinB2
-@Davas123
-@joaoviturino
-@orickmaxx
-@l55nar5
-@nextbyhawk
-@Bruninda019
-@GabrielRibeiroP
-@Shinjoia
-@hy7pee
-@arthurmondequedutra
-@PedrooVsp
-@zBlucker
-@vitiintavares
-@Holmes1212
-@Anthony06927
-@refinado
-@ErickMarinelli
-@pedroomelhor
-@gabrielmonteiro0053
-@Felipealexandre10
-@saantzx7
-@alvarosouzaribeiro
-@gabrielejte
-@Kevinzada
-@antonio77xs
-@marcus.floriano.oliveira
-*/
