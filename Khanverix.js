@@ -226,7 +226,7 @@ function setupMenu() {
         document.onmousemove = e => { if (isDragging) { Object.assign(statsPanel.style, { left: `${Math.max(0, Math.min(e.clientX - offsetX, window.innerWidth - statsPanel.offsetWidth))}px`, top: `${Math.max(0, Math.min(e.clientY - offsetY, window.innerHeight - statsPanel.offsetHeight))}px` }); }};
         if(device.mobile) plppdo.on('domChanged', () => window.location.href.includes("khanacademy.org/profile") ? statsPanel.style.display = 'flex' : statsPanel.style.display = 'none' );
     }
-    function loadWidgetBot() {
+    function {
         if(device.mobile)  return;
         const script = Object.assign(document.createElement('script'), {
             src: 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3',
