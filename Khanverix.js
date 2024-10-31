@@ -419,7 +419,7 @@ loadScript('https://cdn.jsdelivr.net/npm/toastify-js', 'toastifyPlugin')
     sendToast("😈 Khanverix injetado com sucesso!");
     playAudio('https://r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/gcelzszy.wav');
     await delay(500);
-    sendToast(`⭐ Bem vindo(a) de volta: ${Entre no Discord😉}`);
+    sendToast(`⭐ Bem vindo(a) de volta: Entre No Discord`);
     loadedPlugins.forEach(plugin => sendToast(`🪝 ${plugin} Loaded!`, 2000, 'top') );
     hideSplashScreen();
     setupMenu();
