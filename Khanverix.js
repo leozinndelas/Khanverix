@@ -11,7 +11,7 @@ let device = {
 let user = {
     username: "Username",
     nickname: "Nickname",
-    Khanverix free
+    UID: 0
 }
 
 let loadedPlugins = [];
