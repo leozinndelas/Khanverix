@@ -50,7 +50,7 @@ console.log(Object.defineProperties(new Error, { toString: {value() {(new Error)
 // Most of these will eventually stop working, as my proxy will become inactive.
 document.head.appendChild(Object.assign(document.createElement("style"),{innerHTML:"@font-face{font-family:'MuseoSans';src:url('https://proxy.khanverix.space/r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/ynddewua.ttf')format('truetype')}" }));
 document.head.appendChild(Object.assign(document.createElement('style'),{innerHTML:"::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #f1f1f1; } ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background: #555; }"}));
-document.querySelector("link[rel~='icon']").href = 'https://cdn.discordapp.com/attachments/1143232935584079932/1301028639042965524/images_3_processed.png?ex=6722fcd7&is=6721ab57&hm=33954ae2cf8f8e8962102927da2fb1f3722d462651f83925c515352fc0060e8b&';
+document.querySelector("link[rel~='icon']").href = 'https://cdn.discordapp.com/attachments/1163974700096032818/1301377652850032702/KX_1_resized.png?ex=672441e2&is=6722f062&hm=9e8b140034fc395c4b9ba92a0a611d0a9fcfb8fe944040329f67211c5c186e53&';
 
 /* Emmiter */
 class EventEmitter{constructor(){this.events={}}on(t,e){"string"==typeof t&&(t=[t]),t.forEach(t=>{this.events[t]||(this.events[t]=[]),this.events[t].push(e)})}off(t,e){"string"==typeof t&&(t=[t]),t.forEach(t=>{this.events[t]&&(this.events[t]=this.events[t].filter(t=>t!==e))})}emit(t,...e){this.events[t]&&this.events[t].forEach(t=>{t(...e)})}once(t,e){"string"==typeof t&&(t=[t]);let s=(...i)=>{e(...i),this.off(t,s)};this.on(t,s)}};
